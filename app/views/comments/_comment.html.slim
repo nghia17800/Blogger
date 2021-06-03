@@ -1,7 +1,7 @@
-.list-group-item
+.div
   strong
     = comment.author
-  span.text-muted
+  span
     = comment.content
   = link_to article_comment_path(comment.article, comment),
     method: :delete,
