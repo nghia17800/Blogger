@@ -1,0 +1,23 @@
+- provide :title, @article.title
+.detail-new-article
+  .new-article-in-index
+    .h1.text-index-1
+      = @article.title
+    = link_to article_path(@article), method: :delete, data: {confirm: "You sure?"} do
+      <i class="fa fa-trash icon-show-1" aria-hidden="true"></i>
+    = link_to edit_article_path  do
+      <i class="fa fa-pencil-square-o icon-show-2" aria-hidden="true"></i>
+  .content
+    = image_tag(@article.image.url)
+    .content-body
+      = @article.body
+  - if @article.comments.any?
+  h3.mt-4.mb-4
+    | Comments
+  .list-group
+    = render @article.comments
+  h3.mt-4.mb-4
+  | Add Comment
+  .card
+    .card-body
+      = render 'comments/form'

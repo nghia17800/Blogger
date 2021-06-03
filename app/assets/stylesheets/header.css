@@ -1,0 +1,12 @@
+.header {
+  height: 57px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, .125);
+}
+.home {
+  margin-left: 6%;
+}
+.home a {
+  font-weight: bold;
+  color: black;
+}

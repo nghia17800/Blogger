@@ -1,0 +1,10 @@
+.list-group-item
+  strong
+    = comment.author
+  span.text-muted
+    = comment.content
+  = link_to article_comment_path(comment.article, comment),
+    method: :delete,
+    data: { confirm: "Are you sure?"},
+    class: "text-secondary text-decoration-none ml-2" do
+    <i class="fa fa-trash icon-show-1" aria-hidden="true"></i>

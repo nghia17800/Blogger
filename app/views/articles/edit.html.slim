@@ -1,0 +1,14 @@
+- provide :title, "New"
+.detail-new-article
+  .h1
+    | Update Article
+  .row.article-form
+    .col-md-6
+      = form_for :article, url: {action: :update, controller: :articles}, method: :put do |f|
+        = f.label :title
+        = f.text_field :title, class: "form-control title-form"
+        = f.label :body
+        = f.text_field :body, class: "form-control title-body"
+        = f.label :image
+        = f.file_field :image, class: "form-control title-form"
+        = f.submit "Update Article", class: "btn btn-primary submit-article"

@@ -1,0 +1,8 @@
+= form_with( model: [ @article, @article.comments.build ], local: true) do |f|
+  .form-group
+    = f.label :author
+    = f.text_field :author, class: "form-control"
+  .form-group
+    = f.label :content
+    = f.text_area :content, class: "form-control"
+  = f.submit class: "btn btn-primary"

@@ -1,0 +1,14 @@
+- provide :title, "Home"
+.detail-new-article
+  .new-article-in-index
+    .h1.text-index-1
+      | Articles
+    = link_to "New Article", new_article_path, class: "btn btn-primary link-index-1"
+  - @articles.each do |a|
+    .product-list
+      .product
+        .h2
+          = a.title
+        .text-3
+          = a.body
+        = link_to "Read More", article_path(a) , class: "btn btn-primary"
